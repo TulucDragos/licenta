@@ -1,0 +1,16 @@
+For Product:
+
+$ php artisan make:model Product -m (Create the Product Model)
+
+$ php artisan make:seed ProductTableSeeder (Create the Product Table Seed for dummy content)
+
+$ php artisan migrate (Migrate the Model in the DB **The model has a constructor that can pass all the details**)
+
+$ php artisan db:seed (Seed the DB with the data written in the seeder)
+
+$ php artisan make:controller ProductController
+
+For User: 
+
+$ php artisan make:migration create_user_table
+           

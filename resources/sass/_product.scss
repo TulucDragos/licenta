@@ -1,0 +1,195 @@
+.homepage-products {
+  .single_variation_wrap {
+    display: none !important;
+  }
+  .woocommerce #content div.product div.images,
+  .woocommerce div.product div.images,
+  .woocommerce-page #content div.product div.images,
+  .woocommerce-page div.product div.images {
+    float: none;
+    width: 100%;
+  }
+}
+
+.woocommerce .woocommerce-product-gallery.woocommerce-product-gallery--with-images.images {
+  float: none;
+  width: 100%;
+}
+
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger {
+  display: none !important;
+}
+
+.zoomImg {
+  display: none !important;
+}
+
+@media #{$phone} {
+  .woocommerce div.product form.cart {
+    margin-bottom: 0px;
+  }
+  #picker_pa_culoare {
+    text-align: center;
+    display: inline-block;
+  }
+}
+
+a.button.small.product-link.add_to_cart_single.single_add_to_cart_button.button.alt {
+  background-color: $button-color;
+}
+
+a.button.small.product-link.add_to_cart_single.single_add_to_cart_button.button.alt:hover {
+  background-color: $button-color !important;
+}
+
+.product-card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: em(60);
+  .product-text {
+    padding-top: 40px;
+    @media #{$phone} {
+      padding-top: 0;
+      text-align: center;
+    }
+    .product-description {
+      text-align: justify;
+    }
+  }
+  td.value {
+    background-color: #fff;
+  }
+  .product-image {
+    margin-top: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    position: relative;
+    .product-background-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    img.wp-post-image {
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+      height:auto;
+      border-radius: 50%;
+      padding: em(90);
+      @media #{$phone} {
+        padding: em(50);
+      }
+    }
+  }
+  .variations tbody {
+    background-color: transparent;
+    border: 0px;
+    .label {
+      display: none;
+    }
+    .swatch-wrapper {
+      background-color: transparent;
+      border: 0px;
+      .selected {
+        padding: 0;
+      }
+      a {
+        width: em(24) !important;
+        height: em(24) !important;
+        border-radius: 50%;
+      }
+    }
+    a.reset_variations {
+      display: none !important;
+    }
+  }
+  .product-attributes {
+    p {
+      margin-bottom: em(4);
+      font-size: em(14);
+    }
+  }
+  .product-attribute-left {
+    float: left;
+  }
+  .product-attribute-right {
+    float: right;
+  }
+  .product-add-to-cart {
+    img {
+      width: 100%;
+      max-width: 100px;
+      position: relative;
+      left: -25px;
+      top: -5px;
+      z-index: 2;
+      @media #{$phone} {
+        max-width: em(75);
+      }
+    }
+    a {
+      background-color: #1F5184;
+      border-radius: 20px;
+      max-width: em(200);
+      width: 100%;
+      font-size: 1em;
+      color: #fff;
+      padding:em(10);
+    }
+    a:hover {
+      background-color: #1F5184 !important;
+      border-radius: 20px;
+      max-width: em(200);
+      width: 100%;
+      font-size: 1em;
+      color: #fff !important;
+    }
+  }
+  .price-tag {
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    bottom: 0%;
+    left: 10%;
+    z-index: 3;
+    @media #{$phone} {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .price-text {
+    font-size: em(20);
+    transform: rotate(-35deg);
+    position: relative;
+    bottom: -35%;
+    left: -18%;
+    @media #{$phone} {
+      bottom: -34%;
+    }
+    p {
+      color: #1F5184;
+      font-weight: 600;
+      @media #{$phone} {
+        font-size: 0.8em;
+      }
+    }
+  }
+  .product-gallery {
+    margin-top: em(40);
+    @media #{$phone} {
+      text-align: center;
+      margin-top: em(20);
+    }
+    img {
+      border-radius: 10px;
+    }
+  }
+  
+}

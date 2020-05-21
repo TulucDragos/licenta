@@ -1,0 +1,58 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+// Colors
+// =================================================
+$white: #fff;
+$primary-color: #153FA6;
+$secondary-color: #000000;
+$button-color: #22AC48;
+$service-backround-color: #1F242F;
+$backgorund-color: #239194;
+$footer-color: #213143;
+$menu-underline: #FB8516;
+// Font Families
+// =================================================
+$primary-font: Montserrat-Normal;
+$primary-font-h1: Montserrat-Bold;
+$secondary-font: AbrilFatface;
+// Font Weight
+// =================================================
+$small: 200;
+$medium: 400;
+$large: 800;
+// Break Point
+// =================================================
+$mobile-break: 769px;
+$phone: "only screen and (max-width : 769px)";
+$browser-context: 16; // Default
+@function em($pixels,
+$context: $browser-context) {
+  @return #{$pixels/$context}em
+}
+
+;
+// Font Sizes
+// =================================================
+$h1: em(32);
+$h2: em(24);
+$h4: em(24);
+$h3: em(16);
+$p: em(16);
