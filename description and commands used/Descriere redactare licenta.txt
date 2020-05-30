@@ -1,0 +1,5 @@
+fiecare capitul sa fie cu un pic de descriere si un pic de concluzie (cu legatura intre capitole)
+
+Cele 3 nivele descrise sumar (Server Apach, MySql, Browser)
+
+Parte de front-end si partea de backend
