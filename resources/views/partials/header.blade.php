@@ -35,11 +35,17 @@
                 <i class="fa fa-user"></i> Account
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{route('user.signup')}}">Signup</a>
-              <a class="dropdown-item" href="{{route('user.signin')}}">Login</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Logout</a>
-            </div>
+              
+              @if(Auth::check())
+                <a class="dropdown-item" href="{{route('user.profile')}}">User Profile</a>
+                <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{{route('user.logout')}}">Logout</a>
+                </div>
+              @else
+                <a class="dropdown-item" href="{{route('user.signup')}}">Signup</a>
+                <a class="dropdown-item" href="{{route('user.signin')}}">Login</a>
+              @endif            
+              
           </li>
 
       </ul>
