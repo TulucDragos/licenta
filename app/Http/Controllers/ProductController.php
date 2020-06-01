@@ -6,6 +6,8 @@ use App\Product;
 use App\Cart;
 use Illuminate\Http\Request;
 use Session;
+use Stripe\Stripe;
+use Stripe\Charge;
 
 class ProductController extends Controller
 {
@@ -49,6 +51,29 @@ class ProductController extends Controller
         $total = $cart->totalPrice;
         return view('shop.checkout', ['total' => $total]);
 
+    }
+
+    public function postCheckout(Request $request) {
+        if(!Session::has('cart')) {
+            return redirect()->route(shop.shoppingCart);
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        Stripe::setApiKey(env('STRIPE_SECRET'));
+        try {
+            Charge::create ([
+                "amount" => $cart->totalPrice,
+                "currency" => "ron",
+                "source" => $request->stripeToken,
+                "description" => "Test payment from licenta.ro."
+            ]);
+        }
+        catch(\Exception $e) {
+            return redirect()->route('checkout')->with('error', $e->getMessage());
+        }
+
+        Session::forget('cart');
+        return redirect()->route('product.index')->with('success', "Payment Sucessful");
     }
 
 }
