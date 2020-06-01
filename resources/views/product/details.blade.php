@@ -1,12 +1,10 @@
 @extends('layouts.master')
 
 @section('title')
-    Laravel Shopping Cart
+    Single Product Page
 @endsection
 
 @section('content')
-
-@foreach($products as $product)
 
 <div class="product-card">
     <div class="row">   
@@ -48,7 +46,7 @@
 
                 <!-- Get product buttons -->
                 <div class="product-add-to-cart">
-                    <a href="{{route('product.details', ['id' => $product->id])}}" class="button small product-link">Vezi detalii</a>
+                    <a href="{{route('product.addToCart', ['id' => $product->id])}}" class="button small product-link">Add to cart</a>
                     <img src="">
                 </div>
                     
@@ -57,9 +55,5 @@
 
     </div>
 </div>
-
-@endforeach
-
-
 
 @endsection
