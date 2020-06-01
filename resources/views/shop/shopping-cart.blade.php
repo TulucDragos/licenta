@@ -12,7 +12,7 @@
                 <ul>
                     @foreach ($products as $product)
                         <li class="list-group-item">
-                            
+
                             <strong>{{$product['item']['title']}}</strong>
                             <span class="label label-success">{{$product['price']}}</span>
                             <div class="btn-group">
@@ -38,7 +38,7 @@
         <hr>
         <div class="row">
             <div class="col-sm-6 col-md-6 auto-margin">
-                <button type="button" class="btn btn-success">Checkout</button>
+                <a href="{{route('checkout')}}" type="button" class="btn btn-success">Checkout</a>
             </div>
         </div>
 
